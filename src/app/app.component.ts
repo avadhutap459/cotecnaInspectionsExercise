@@ -1,5 +1,4 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
-import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { InspectionSvcService } from './inspection-svc.service';
@@ -7,7 +6,6 @@ import { Insepector } from './insepector.model';
 import { CreateAndUpdateInsepctionComponent } from './create-and-update-insepction/create-and-update-insepction.component';
 import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { Inspection } from './inspection';
-import { forkJoin } from 'rxjs';
 import { DeleteInsepctionComponent } from './delete-insepction/delete-insepction.component';
 
 

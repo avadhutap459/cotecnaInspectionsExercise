@@ -6,10 +6,7 @@ import { Insepector } from '../insepector.model';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { DateAdapter, MAT_DATE_FORMATS } from '@angular/material/core';
 import { APP_DATE_FORMATS, AppDateAdapter } from '../date.adapter';
-import * as _moment from 'moment';
-import { Moment } from 'moment';
 
-const moment = _moment;
 
 
 @Component({

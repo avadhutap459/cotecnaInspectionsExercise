@@ -9,7 +9,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InspectionSvcService } from './inspection-svc.service';
 import { CreateAndUpdateInsepctionComponent } from './create-and-update-insepction/create-and-update-insepction.component';
-import { DatePipe } from '@angular/common';
 import { DeleteInsepctionComponent } from './delete-insepction/delete-insepction.component';
 
 @NgModule({
@@ -28,8 +27,7 @@ import { DeleteInsepctionComponent } from './delete-insepction/delete-insepction
     ReactiveFormsModule
   ],
   providers: [
-    InspectionSvcService,
-    DatePipe
+    InspectionSvcService
   ],
   bootstrap: [AppComponent]
   
