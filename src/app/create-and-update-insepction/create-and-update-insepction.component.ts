@@ -89,7 +89,8 @@ export class CreateAndUpdateInsepctionComponent implements OnInit {
     this.InspectionSvc.createandupdateinspection(this.ObjInspectionModel).subscribe(x=> {
       debugger
       if(!x.IsSuccess){
-          this.message = x.Message;
+        alert(x.Message)
+         // this.message = x.Message;
       } else {
         this._mdr.close({ data: x.Message })
       }

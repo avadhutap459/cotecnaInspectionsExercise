@@ -1,35 +1,14 @@
-table {
-    width: 100%;
-}
-
-.mat-form-field {
-    font-size: 14px;
-    width: 100%;
-}
-
-
-.example-card {
-    margin: 0 auto;
-    width: 100%;
-    display: inline-block;
-    vertical-align: middle;
-}
 
 .buttons {
-    width: 200px;
-    margin: 0 auto;
-    display: inline;
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
 }
 
 .action_btn {
-    width: 200px;
-    margin: 0 auto;
-    display: inline;
-}
-
-.mat-column-Action[_ngcontent-c15] {
-    flex: 9rem;
-    min-width: 100rem;
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
 }
 
 .example-full-width {
@@ -38,19 +17,8 @@ table {
     position: relative;
   }
 
-  .center{
-    width: 75%;
-    margin: 10px auto;
-  }
+.mat-form-field {
+    font-size: 14px;
+    width: 100%;
+}
 
-  .main-div{
-    height: 60vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .btn-holder {
-    justify-content: flex-end;
-    display: flex;
-  }

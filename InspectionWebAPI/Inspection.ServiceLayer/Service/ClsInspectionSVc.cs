@@ -131,7 +131,7 @@ namespace Inspection.ServiceLayer.Service
       }
     }
 
-    public bool CheckInspectionExistForPerDay(int InspectorId,DateTime InspectionDt)
+    public bool CheckInspectionExistForPerDay(int CurrentInspectorId,DateTime CurrentInspectionDt,string CurrentStatus)
     {
       try
       {
@@ -141,9 +141,9 @@ namespace Inspection.ServiceLayer.Service
           "new" , "in progress"
         };
         
-        var GetAllInsepctionByInspectorAndStatus = _unitOfWork.dbContext.TxnInspections.Where(x => x.InspectorId == InspectorId
+        var GetAllInsepctionByInspectorAndStatus = _unitOfWork.dbContext.TxnInspections.Where(x => x.InspectorId == CurrentInspectorId
          && lststring.Contains(x.Status.ToLower())).ToList();
-        bool Isinspectionexistforday = GetAllInsepctionByInspectorAndStatus.Where(x => x.InspectionDate.ToString("dd-MM-yyyy") == InspectionDt.ToString("dd-MM-yyyy")).Any();
+        bool Isinspectionexistforday = GetAllInsepctionByInspectorAndStatus.Where(x => x.InspectionDate.ToString("dd-MM-yyyy") == CurrentInspectionDt.ToString("dd-MM-yyyy") && x.Status == CurrentStatus).Any();
 
        
         return Isinspectionexistforday;

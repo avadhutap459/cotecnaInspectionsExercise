@@ -8,7 +8,7 @@ namespace Inspection.ServiceLayer.Interface
     List<ClsInspectionsBM> GetAllInspection();
     List<ClsInspectionsBM> GetAllInspectionsByInspectorName(string InspectoName);
     List<ClsInspectionsBM> GetAllInspectionsByCondition(string ConditionValue);
-    bool CheckInspectionExistForPerDay(int InspectorId, DateTime InspectionDt);
+    bool CheckInspectionExistForPerDay(int CurrentInspectorId, DateTime CurrentInspectionDt, string CurrentStatus);
     int InsertInspection(ClsInspectionsBM objInspection);
     void UpdateInspection(ClsInspectionsBM objInspection);
     void DeleteInspection(int InspectionId);

@@ -58,6 +58,10 @@ namespace Inspection.APILayer.Controllers
       {
         List<ClsInspectionsBM> lstInspection = _IInspection.GetAllInspectionsByInspectorName(InspectorName);
 
+        if(lstInspection.Count == 0)
+        {
+          return Ok(new { StatusCode = (int)System.Net.HttpStatusCode.BadRequest, IsSuccess = false, InspectionData = lstInspection });
+        }
         
 
         return Ok(new { IsSuccess = true, InspectionData = lstInspection });
@@ -98,7 +102,7 @@ namespace Inspection.APILayer.Controllers
           // objInspection.InspectionDate.ToString("dd/MM/yyyy");
           objInspection.InspectionDate = objInspection.InspectionDate == null ? (DateTime?)null : objInspection.InspectionDate.Value.AddDays(1);
 
-          if (_IInspection.CheckInspectionExistForPerDay(objInspection.InspectorId, objInspection.InspectionDate.Value))
+          if (_IInspection.CheckInspectionExistForPerDay(objInspection.InspectorId, objInspection.InspectionDate.Value, objInspection.Status))
           {
             return Ok(new { IsSuccess = false, Message = "Only one inspection will assign to each inspector for a day "
             });

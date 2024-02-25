@@ -139,6 +139,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         //this.name = "";
       } else if(res.data === "Data insert successfully"){
         this.message = res.data
+        setTimeout(() => this.message === "", 1000);
         this.GetAllInspection();
       }
     });
@@ -158,6 +159,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         //this.name = "";
       }else if(res.data === "Data update successfully"){
         this.message = res.data
+        setTimeout(() => this.message === "", 1000);
         this.GetAllInspection();
       }
     });
@@ -176,6 +178,7 @@ export class AppComponent implements OnInit, AfterViewInit {
         this.InspectionSvc.deleteinspecationbyid(res.InspectionId).subscribe(x=> {
           if(x.IsSuccess){
             this.message = x.Message
+            setTimeout(() => this.message === "", 1000);
             this.GetAllInspection();
 
           }
