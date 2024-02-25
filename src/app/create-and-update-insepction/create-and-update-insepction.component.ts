@@ -36,7 +36,6 @@ export class CreateAndUpdateInsepctionComponent implements OnInit {
     private InspectionSvc: InspectionSvcService,
     private _mdr: MatDialogRef<CreateAndUpdateInsepctionComponent>,
     @Inject(MAT_DIALOG_DATA) data: any) {
-      debugger
     this.ObjInspectionModel = data.InspectionModel;
 
     if(this.ObjInspectionModel.InspectionID == undefined ){
@@ -49,7 +48,6 @@ export class CreateAndUpdateInsepctionComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    debugger
     this.InspectionFG = this.formBuilder.group(
       {
         InspectionDt: ["", [Validators.required]],
@@ -78,13 +76,11 @@ export class CreateAndUpdateInsepctionComponent implements OnInit {
     })
   }
   OnSubmit() {
-    debugger
     if (this.InspectionFG.invalid) {
       return;
     }
 
     this.InspectionSvc.createandupdateinspection(this.ObjInspectionModel).subscribe(x=> {
-      debugger
       if(!x.IsSuccess){
         alert(x.Message)
          // this.message = x.Message;

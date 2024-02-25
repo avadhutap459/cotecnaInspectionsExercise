@@ -25,7 +25,7 @@ export class AppComponent implements OnInit, AfterViewInit {
   ObjInspectionModel: Inspection = new Inspection();
   message: string = "";
   LstInspection: Inspection[] = [];
-
+  public isVisible: boolean = false;
   dataSource: MatTableDataSource<Inspection>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -47,7 +47,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   applyFilter(event: Event) {
-    debugger
     const filterValue = (event.target as HTMLInputElement).value;
   
     this.dataSource.filter = filterValue.trim().toLowerCase();
@@ -64,8 +63,6 @@ export class AppComponent implements OnInit, AfterViewInit {
     }
   } 
   OnchangeInsepctor(name: any) {
-    debugger
-
     if(name === "" || name === undefined){
       this.GetAllInspection();
     } else {
@@ -101,7 +98,6 @@ export class AppComponent implements OnInit, AfterViewInit {
 
   GetAllInspection() {
     this.InspectionSvc.getallregisterinspecation().subscribe(x => {
-      debugger
       if (x.IsSuccess) {
 
         this.LstInspection = x.InspectionData;
@@ -121,8 +117,6 @@ export class AppComponent implements OnInit, AfterViewInit {
   }
 
   CreateInspection() {
-
-    debugger
     this.ObjInspectionModel = new Inspection();
     
     this.matDialogRef = this.matDialog.open(CreateAndUpdateInsepctionComponent, {
@@ -131,20 +125,19 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
 
     this.matDialogRef.afterClosed().subscribe(res => {
-      debugger;
       if ((res == true)) {
         
         //this.name = "";
       } else if(res.data === "Data insert successfully"){
         this.message = res.data
-        setTimeout(() => this.message === "", 1000);
+        this.isVisible = true;
+        setTimeout(()=> this.isVisible = false,2500); 
         this.GetAllInspection();
       }
     });
 
   }
   EditInspection(InspectionId: any) {
-    debugger;
     var InspectionDataModel = this.LstInspection.filter(x=>x.InspectionID === InspectionId)[0]
     this.matDialogRef = this.matDialog.open(CreateAndUpdateInsepctionComponent, {
       data: { InspectionModel: InspectionDataModel },
@@ -152,31 +145,30 @@ export class AppComponent implements OnInit, AfterViewInit {
     });
 
     this.matDialogRef.afterClosed().subscribe(res => {
-      debugger;
       if ((res == true)) {
         //this.name = "";
       }else if(res.data === "Data update successfully"){
         this.message = res.data
-        setTimeout(() => this.message === "", 1000);
+        this.isVisible = true;
+        setTimeout(()=> this.isVisible = false,2500); 
         this.GetAllInspection();
       }
     });
   }
 
   DeleteInspection(InspectionId: any) {
-    debugger
     this.matDeleteDialogRef = this.matDialog.open(DeleteInsepctionComponent, {
       data: { InspectionId: InspectionId },
       disableClose: true
     });
 
     this.matDeleteDialogRef.afterClosed().subscribe(res => {
-      debugger;
       if ((res.data == "yes")) {
         this.InspectionSvc.deleteinspecationbyid(res.InspectionId).subscribe(x=> {
           if(x.IsSuccess){
             this.message = x.Message
-            setTimeout(() => this.message === "", 1000);
+            this.isVisible = true;
+          setTimeout(()=> this.isVisible = false,2500); 
             this.GetAllInspection();
 
           }

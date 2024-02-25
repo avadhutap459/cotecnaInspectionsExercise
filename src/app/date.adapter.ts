@@ -4,7 +4,6 @@ import { NativeDateAdapter } from "@angular/material/core";
 export class AppDateAdapter extends NativeDateAdapter {
 
     override parse(value: any): Date | null {
-        debugger
         if ((typeof value === 'string') && (value.indexOf('/') > -1)) {
           const str = value.split('/');
           const year = Number(str[2]);
@@ -16,7 +15,6 @@ export class AppDateAdapter extends NativeDateAdapter {
         return isNaN(timestamp) ? null : new Date(timestamp);
       }
    override format(date: Date, displayFormat: string): string {
-    debugger
        if (displayFormat == "input") {
           let day = date.getDate();
           let month = date.getMonth() + 1;
@@ -32,7 +30,6 @@ export class AppDateAdapter extends NativeDateAdapter {
    }
 
    private _to2digit(n: number) {
-    debugger
        return ('00' + n).slice(-2);
    } 
 }
