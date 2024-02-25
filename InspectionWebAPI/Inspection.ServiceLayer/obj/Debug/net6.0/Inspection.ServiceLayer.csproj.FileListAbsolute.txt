@@ -1,0 +1,15 @@
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.csproj.AssemblyReference.cache
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.GeneratedMSBuildEditorConfig.editorconfig
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.AssemblyInfoInputs.cache
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.AssemblyInfo.cs
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.csproj.CoreCompileInputs.cache
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\bin\Debug\net6.0\Inspection.ServiceLayer.deps.json
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\bin\Debug\net6.0\Inspection.ServiceLayer.dll
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\bin\Debug\net6.0\Inspection.ServiceLayer.pdb
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\bin\Debug\net6.0\Inspection.DbLayer.dll
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\bin\Debug\net6.0\Inspection.DbLayer.pdb
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.csproj.CopyComplete
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.dll
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\refint\Inspection.ServiceLayer.dll
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\Inspection.ServiceLayer.pdb
+E:\cotecna\Angular\InspectionWebApp\InspectionWebAPI\Inspection.ServiceLayer\obj\Debug\net6.0\ref\Inspection.ServiceLayer.dll

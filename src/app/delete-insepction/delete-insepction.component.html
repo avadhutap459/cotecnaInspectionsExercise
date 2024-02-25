@@ -1,0 +1,18 @@
+<div style="width:600px">
+    <h2 mat-dialog-title>Delete Inspection</h2>
+    <div mat-dialog-content>Do you want to delete this inspection - {{InspectionId}} ? </div>
+    <div mat-dialog-actions align="end">
+        <span>
+            <button type="button" mat-button class="mat-raised-button mat-primary"
+                (click)="deleteInspection(this.InspectionId)">
+                Delete Record
+            </button>
+
+            <button type="button" mat-button class="mat-raised-button mat-primary" (click)="CloseDialog()">
+                Cancel
+            </button>
+
+
+        </span>
+    </div>
+</div>
